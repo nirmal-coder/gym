@@ -1,5 +1,6 @@
 "use client"
 import React from 'react'
+import Image from 'next/image'
 import { Card, Container } from './styledComponent'
 
 const obj = [{
@@ -40,7 +41,7 @@ const GetStart = () => {
     <Container>
         {obj.map((each) => (
             <Card key={each.id}>
-                <img src={each.image} alt={each.title} />
+                <Image src={each.image} alt={each.title} width={300} height={150}/>
                 <div>
                     <h2>{each.title}</h2>
                     <p>{each.description}</p>
